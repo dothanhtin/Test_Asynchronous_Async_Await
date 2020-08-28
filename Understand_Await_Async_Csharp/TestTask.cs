@@ -104,6 +104,32 @@ namespace Understand_Await_Async_Csharp
             WriteLine($"Ket thuc task6", ConsoleColor.DarkMagenta);
             return Task.FromResult(1);
         }
+        //task7
+        public static Task printTask7(int soLanLap7)
+        {
+            return Task.Run(() =>
+            {
+                for (int i = 0; i <= soLanLap7; i++)
+                {
+                    WriteLine($"Task7 - {i}", ConsoleColor.DarkGreen);
+                    Thread.Sleep(700);
+                }
+                WriteLine($"Ket thuc task7", ConsoleColor.DarkGreen);
+            });
+        }
+        //task8
+        public static Task printTask8(int soLanLap8)
+        {
+            return Task.Run(() =>
+            {
+                for (int i = 0; i <= soLanLap8; i++)
+                {
+                    WriteLine($"Task8 - {i}", ConsoleColor.DarkYellow);
+                    Thread.Sleep(800);
+                }
+                WriteLine($"Ket thuc task8", ConsoleColor.DarkYellow);
+            });
+        }
         public static void WriteLine(string s, ConsoleColor color)
         {
             Console.ForegroundColor = color;
